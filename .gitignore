@@ -210,7 +210,7 @@ __marimo__/
 
 # Ignore the virtual environment (should be there, but double-check)
 venv/
-/venv/
+/ragenv/
 
 # Ignore the secret API keys file
 .env
