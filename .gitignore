@@ -219,5 +219,6 @@ venv/
 vectorstore/
 /vectorstore/
 
+vectorstore/raw_chunks.pkl
 # Ignore macOS junk
 .DS_Store
