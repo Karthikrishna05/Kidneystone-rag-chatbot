@@ -1,15 +1,15 @@
 #Creates chunks of raw text to create semantic search vectors required for FAISS retriever and bm25 retriever
 import os
 import pickle
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.community.document_loaders import PyPDFDirectoryLoader
-from langchain.community.vectorstores import FAISS
-from langchain.embeddings import HuggingFaceEmbeddings
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain_community.document_loaders import PyPDFDirectoryLoader
+from langchain_community.vectorstores import FAISS
+from langchain_community.embeddings import HuggingFaceEmbeddings
 vectorbase_path = "vectorstore"
 embedding_model="sentence-transformers/all-MiniLM-L6-v2"
 #embedding_model="all-mpnet-base-v2"
 data_path = "data"
-raw_chunks_path = r"C:\Users\pc\Project-Programming\Python\Kidneystone-rag-chatbot\vectorstore\raw_chunks.pkl"
+raw_chunks_path = os.path.join(vectorbase_path, "raw_chunks.pkl")
 def create_chunks_and_vectorize():
     loader = PyPDFDirectoryLoader(data_path)
     documents = loader.load()
