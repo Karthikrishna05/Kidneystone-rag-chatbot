@@ -1,15 +1,22 @@
 # src/app.py
-
+import os
+import pickle
+from src.vectorizer import create_chunks_and_vectorize
 import streamlit as st
 from rag_pipeline import rag_loader_and_pipeliner # This imports our new chain
 from langchain.schema import HumanMessage, AIMessage
 
-# --- Page Config (same) ---
 st.set_page_config(
     page_title="VruCare",
     page_icon="🩺",
     layout="wide"
 )
+VECTORSTORE_PATH = "vectorstore"
+if not os.path.exists(VECTORSTORE_PATH):
+    with st.spinner(" performing one-time setup: Building the knowledge base..."):
+        create_chunks_and_vectorize()
+    st.success("Knowledge base built successfully!")
+
 with st.sidebar:
     st.title("🩺 VruCare")
     st.markdown("---")

@@ -222,3 +222,10 @@ vectorstore/
 vectorstore/raw_chunks.pkl
 # Ignore macOS junk
 .DS_Store
+
+.env
+vectorstore/
+__pycache__/
+*.pyc
+ragenv/
+venv/
