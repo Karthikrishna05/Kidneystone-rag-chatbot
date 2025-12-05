@@ -11,6 +11,9 @@ embedding_model="sentence-transformers/all-MiniLM-L6-v2"
 data_path = "data"
 raw_chunks_path = os.path.join(vectorbase_path, "raw_chunks.pkl")
 def create_chunks_and_vectorize():
+    if not os.path.exists(vectorbase_path):
+        os.makedirs(vectorbase_path)
+        print(f"Created directory: {vectorbase_path}")
     loader = PyPDFDirectoryLoader(data_path)
     documents = loader.load()
     print(f"Loaded {len(documents)} documents")
