@@ -1,7 +1,7 @@
 # src/app.py
 import os
 import pickle
-from src.vectorizer import create_chunks_and_vectorize
+from vectorizer import create_chunks_and_vectorize
 import streamlit as st
 from rag_pipeline import rag_loader_and_pipeliner # This imports our new chain
 from langchain.schema import HumanMessage, AIMessage
