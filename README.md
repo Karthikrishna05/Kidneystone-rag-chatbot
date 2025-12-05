@@ -1,6 +1,6 @@
 # 🩺 VruCare: Kidney Stone Information Chatbot
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://kidneystone-rag-chatbot.streamlit.app/)
 [![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/release/python-3110/)
 [![LangChain](https://img.shields.io/badge/LangChain-RAG-green)](https://python.langchain.com/)
 [![OpenRouter](https://img.shields.io/badge/LLM-OpenRouter-purple)](https://openrouter.ai/)
@@ -100,3 +100,10 @@ Bash
 streamlit run src/app.py
 ```
 The app will open in your browser at http://localhost:8501.
+
+## 📚 Knowledge Base Sources
+The chatbot's intelligence is grounded strictly in the following authoritative texts:
+* **American Urological Association (AUA):** Medical Management Guidelines[cite: 1076].
+* **National Kidney Foundation:** Diet and Stone Prevention Guides[cite: 1].
+* **NIDDK:** Urologic Diseases in America Project Data[cite: 1701].
+* **Recent Research:** Systematic reviews on fluid intake and prevention[cite: 2142].
